@@ -176,6 +176,7 @@ nav ul li a:hover {
 #contact-form input[type="text"],
 #contact-form input[type="email"],
 #contact-form textarea {
+    font-family: Arial, sans-serif;
     margin-bottom: 15px;
     padding: 10px;
     border-radius: 5px;
