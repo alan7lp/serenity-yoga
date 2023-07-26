@@ -1,0 +1,260 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+.container{
+    height: 100vh;
+    width: 100%;
+    background-image: url(Images/Background.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    
+}
+#classes, #about, #connect {
+    height: 100vh; /* Each section will be the height of the viewport */
+    width: 100%;
+    position: relative; /* Needed for the navbar to be positioned correctly */
+    /* Add other styles as needed */
+    padding: 1em;
+}
+.navbar{
+    width: 100%;
+    padding: 15px;
+    display: flex;
+    justify-content: flex-end;   /* Align the nav items to the right */
+    position: fixed; /* Make navbar fixed on top */
+    z-index: 1000; /* Ensure navbar stays on top of other elements */
+    /* Add other styles as needed */
+    background-color: rgba(255, 255, 255, 0.5);
+
+}
+.navbar ul{
+    display: flex;               /* Added this to make the list items in a line */
+    padding-right:0px;         /* Same right margin as before */
+    margin-right: 6%;
+}
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin-left: 45px;           /* changed this from margin to margin-left to space the items */
+    
+    
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: #5f5f5f;
+    font-size: 12px;
+    transition: all 0.3s ease;
+    
+}
+.navbar ul li a:hover {
+    color: white; /* Change the color to white when hovered over */
+    background: linear-gradient(45deg, rgb(106, 164, 252), rgb(190, 69, 247)); /* Add a gradient background when hovered over */
+    padding: 10px 20px; /* Add some padding to make the background visible */
+    border-radius: 5px; /* Round the corners of the background */
+    transform: scale(1.1); /* Make the text 10% larger when hovered over */
+}
+section{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    padding: 1em;
+}
+.logo{
+    position:absolute;          /* Changed this to absolute to move the logo */
+    width: 195px;
+    cursor: pointer;
+    top: 30%;                    /* These two lines center the logo vertically */
+    transform: translateY(5%);
+    left: 55%;                   /* Position from the left of the screen, adjust as needed */
+
+}
+.content{
+    width: 100%;
+    position: absolute;
+    top: 30%;
+}
+.left-col{
+    margin-left: 30%;
+    
+}
+.left-col h1{
+    font-size: 90px;
+    color: #fff;
+    line-height: 90px;
+    text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.5); /* Horizontal offset, vertical offset, blur radius, color */
+    
+}
+.right-col{ 
+    float: right; 
+    margin-right: 6%; 
+    margin-top: 15%; 
+    display: flex;
+    align-items: center;
+}
+.right-col p{
+    font-size: 15px;
+    color: #5f5f5f;
+    font-weight: 400;
+    margin-right: 15px;
+}
+#icon {
+    width: 40px;
+    cursor: pointer;
+    transition: transform 0.3s ease; /* This will animate the scaling */
+}
+
+#icon:hover {
+    transform: scale(1.3); /* Make the icon 10% larger when hovered over */
+}
+
+body {
+    overflow: auto;
+    
+}
+html, body {
+    overflow-x: hidden;
+}
+
+* {
+    box-sizing: border-box;
+}
+.studio-description {
+    position: absolute;
+    right: 3%;
+    top: 30%;
+    transform: translateY(-70%);
+    width: 15%;
+    color: #fff;
+    font-size: 20px;
+    line-height: 1.5;
+}
+.studio-description span {
+    opacity: 0; /* Start with the words invisible */
+    animation: fade-in 1.5s ease-in forwards; /* Animation named 'fade-in' lasting 1 second and set to remain in the end state */
+}
+
+@keyframes fade-in {
+    to { opacity: 1; } /* End state of the animation: fully visible */
+}
+section h1 {
+    color: white; 
+    font-size: 3em; /* adjust as necessary */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* adjust as necessary */
+}
+#social-media-icons {
+    position: relative;
+    top: 10px;
+    left: 10px;
+    z-index: 2;
+    display: flex;
+}
+
+#social-media-icons a img {
+    width: 35px; /* set width */
+    height: 35px; /* set height */
+    object-fit: cover; /* force image to cover entire space */
+    border-radius: 50%; /* make the images round */
+    margin-right: 10px;
+    transition: transform 0.3s ease; /* transition for zoom effect */
+}
+
+#social-media-icons a img:hover {
+    transform: scale(1.2); /* zoom in on hover */
+}
+
+.classes-content {
+    display: flex;
+    justify-content: space-around; /* This will evenly distribute the remaining space around the items, providing the horizontal spacing. */
+    flex-wrap: wrap; /* This will allow the items to wrap to the next line if the container is too small. */
+}
+
+.class {
+    text-align: center; /* Aligns the text with the center of the .class div */
+    margin: 30px;
+    width: 300px;
+}
+
+.class img {
+    width: 300px;
+    height: 200px;
+    margin-bottom: 20px;
+}
+
+.class p {
+    text-align:center;
+    margin-top: 20px;
+    width: 100%; /* Take the full width of the .class div */
+    color: white;
+    word-wrap:normal;
+    line-height: 1.5;
+}
+.class strong p {
+    font-size: 20px; /* adjust size as desired */
+    font-weight: bold;
+    color: rgb(255, 255, 255)
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+#contact-form label {
+    margin-bottom: 5px;
+}
+
+#contact-form input[type="text"],
+#contact-form input[type="email"],
+#contact-form textarea {
+    font-family: Arial, sans-serif;
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#contact-form input[type="submit"] {
+    cursor: pointer;
+    background-color: #008080;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+.centered-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#contact-form input[type="submit"]:hover {
+    background-color: #006666;
+}
+#classes {
+    background-image: url(Images/Classes.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#about {
+    background-image: url(Images/About.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#connect {
+    background-image: url(Images/Connect.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+  

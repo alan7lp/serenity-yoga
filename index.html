@@ -1,0 +1,133 @@
+
+<html>
+<head>
+    <title>Testing Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   
+    <div class="container" id="home">
+        <img src="Images/Logo.png" class="logo">
+        <div class="navbar">
+            
+            <ul>
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#classes">CLASSES</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#connect">CONNECT</a></li>
+            </ul>
+        </div>
+        <section id="home">
+            <div class="content">
+                <div class="left-col">
+                    <h1>SERENITY<br>YOGA<br>STUDIO</h1>
+                </div>
+                <div class="right-col">
+                    <p id="description">Click to Listen</p>
+                    <img src="Images/Play.png" id="icon">
+                </div>
+                <div class="studio-description">
+                    <p>
+                        <span>Welcome</span>
+                        <span>to</span>
+                        <span>Serenity</span>
+                        <span>Yoga</span>
+                        <span>Studio,</span>
+                        <span>a</span>
+                        <span>sanctuary</span>
+                        <span>where</span>
+                        <span>you</span>
+                        <span>can</span>
+                        <span>experience</span>
+                        <span>the</span>
+                        <span>joy</span>
+                        <span>of</span>
+                        <span>yoga</span>
+                        <span>and</span>
+                        <span>meditation.</span>
+                        <span>Our</span>
+                        <span>mission</span>
+                        <span>is</span>
+                        <span>to</span>
+                        <span>nurture</span>
+                        <span>mind,</span>
+                        <span>body,</span>
+                        <span>and</span>
+                        <span>spirit</span>
+                        <span>through</span>
+                        <span>strength,</span>
+                        <span>flexibility,</span>
+                        <span>and</span>
+                        <span>mindful</span>
+                        <span>movement.</span>
+                    </p>
+                </div>          
+            </div>
+        </section>
+        <div id="classes">
+            <section class="centered-content">
+            <h1>Our Classes</h1>
+            <div class="classes-content">
+                <div class="class">
+                    <img src="Images/Ashtanga.jpg">
+                    <strong><p>Ashtanga Vinyasa Yoga</p></strong>
+                    <p>Ashtanga Vinyasa Yoga is a modern and dynamic, flowing style of yoga that focuses on synchronizing the breath with a progressive series of postures. This process produces intense internal heat and a purifying sweat that detoxifies muscles and organs, resulting in improved circulation, flexibility, and stamina.</p>
+                </div>
+                <div class="class">
+                    <img src="Images/Hot.jpg">
+                    <strong><p>Hot Yoga</p></strong>
+                    <p>Hot Yoga, often associated with Bikram Yoga, is performed under hot and humid conditions, leading to profuse sweating. The heat helps you go deeper into the poses, enhancing your flexibility and helping to flush toxins out of your body. This style is intense but can be modified for all levels of fitness.</p>
+                </div>
+                <div class="class">
+                    <img src="Images/Restorative.jpg">
+                    <strong><p>Restorative Yoga</p></strong>
+                    <p>Restorative Yoga is a gentle, slow, still style of yoga that involves long, passive holds in a series of 4-6 restful poses. Yogis are often supported by props to enhance or deepen their experience and achieve a state of total relaxation and release. It's the perfect way to unwind after a stressful day.</p>
+                </div>
+
+            </div>
+        </section>
+        </div>
+        <div id="about">
+            <section class="centered-content">
+            <h1>About Us</h1>
+            <p>About content goes here</p>
+        </section>
+        </div>
+
+        <div id="connect">
+            <section class="centered-content">
+            <h1>Connect with Us</h1>
+            <p>123 Yoga St., Älmhult, Sweden</p>
+            <p>Phone: 123-456-7890</p>
+            <p>Email: nicol.nicol333@gmail.com</p>
+
+            <div id="social-media-icons">
+                <a href="https://www.instagram.com/diary_of_nicol/" target="_blank">
+                    <img src="Images/Insta.png" alt="Instagram">
+                </a>
+                <a href="https://www.facebook.com/nicol.ilencikova" target="_blank">
+                    <img src="Images/Face.png" alt="Facebook">
+                </a>
+                <a href="https://www.linkedin.com/in/nicol-ilencikova/" target="_blank">
+                    <img src="Images/Linke.png" alt="LinkedIn">
+                </a>
+            </div>
+            <form id="contact-form" action="https://formspree.io/f/xpzgwerq" method="POST">
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name" required><br>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required><br>
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message" required></textarea><br>
+                <input type="submit" value="Submit">
+            </form>
+        </section>
+        </div>
+        
+    </div>
+    <audio id="MySong">
+        <source src="Sounds/Bamboo.mp3" type="audio/mp3">
+    </audio>
+    <script src="effects.js"></script>
+</body>
+</html>
