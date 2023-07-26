@@ -13,6 +13,7 @@
     
 }
 #classes, #about, #connect {
+    box-sizing: border-box;
     height: 100vh; /* Each section will be the height of the viewport */
     width: 100%;
     position: relative; /* Needed for the navbar to be positioned correctly */
@@ -112,10 +113,13 @@ section{
 
 body {
     overflow: auto;
-    
 }
+
 html, body {
     overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    height: 100%;
 }
 
 * {
@@ -255,6 +259,67 @@ html {
     background-image: url(Images/Connect.jpg);
     background-size: cover;
     background-position: center;
+    min-height: 100vh;       
+}
+.footer {
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    background-color: #4e395f;
+    color: #ffffff;
+    text-align: center;
+    padding: 0.2em 0;
+    font-size: 0.7em;
 }
 
+.slideshow {
+    position: absolute;
+    top: 35%;
+    width: 230px;
+    height: 300px;
+    overflow: hidden;
+}
+
+.slideshow-right {
+    right: 25%;
+}
+
+.slideshow .slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0; /* New addition */
+    background-repeat: no-repeat;
+    animation: slide 15s infinite;
+    animation-fill-mode: forwards; /* New addition */
+}
+
+.slideshow .slide:nth-child(1) {
+    background-image: url('Images/Nici3.png');
+    animation-delay: 0s;
+}
+
+.slideshow .slide:nth-child(2) {
+    background-image: url('Images/Nici4.png');
+    animation-delay: 5s;
+}
+
+.slideshow .slide:nth-child(3) {
+    background-image: url('Images/Nici5.png');
+    animation-delay: 10s;
+}
+@keyframes slide {
+    0% { 
+        opacity: 0; 
+        transform: scale(1.0); 
+    }
+    10%, 30% { 
+        opacity: 1; 
+        transform: scale(1.1); 
+    }
+    33.33%, 100% { 
+        opacity: 0; 
+        transform: scale(1.0); 
+    }
+}
   
