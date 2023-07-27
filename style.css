@@ -68,10 +68,17 @@ section{
     width: 195px;
     cursor: pointer;
     top: 30%;                    /* These two lines center the logo vertically */
-    transform: translateY(5%);
-    left: 55%;                   /* Position from the left of the screen, adjust as needed */
-
+    transform: translateY(5%) scale(0.5); /* Start at normal size */
+    left: 58%;
+    animation: zoomIn 7s ease-in-out forwards; /* Add this line */
 }
+
+@keyframes zoomIn {
+    100% {
+        transform: translateY(5%) scale(1.2); /* At the end, zoom in to 1.1 times the normal size */
+    }
+}
+
 .content{
     width: 100%;
     position: absolute;
@@ -82,11 +89,14 @@ section{
     
 }
 .left-col h1{
-    font-size: 90px;
-    color: #fff;
-    line-height: 90px;
-    text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.5); /* Horizontal offset, vertical offset, blur radius, color */
-    
+        font-size: 90px;
+        line-height: 90px;
+        text-shadow: 4px 4px 6px rgba(255, 255, 255, 0.4);
+        color: #ffffff; /* This will be the color for browsers that do not support the gradient */
+        background: -webkit-linear-gradient(left, rgb(103, 29, 187,1), rgb(200, 228, 241,1));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        
 }
 .right-col{ 
     float: right; 
@@ -127,13 +137,14 @@ html, body {
 }
 .studio-description {
     position: absolute;
-    right: 3%;
-    top: 30%;
+    right: 13%;
+    top: 33%;
     transform: translateY(-70%);
     width: 15%;
     color: #fff;
     font-size: 20px;
-    line-height: 1.5;
+    line-height: 1.65;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 .studio-description span {
     opacity: 0; /* Start with the words invisible */
@@ -290,7 +301,7 @@ html {
     height: 100%;
     opacity: 0; /* New addition */
     background-repeat: no-repeat;
-    animation: slide 15s infinite;
+    animation: slide 12s infinite;
     animation-fill-mode: forwards; /* New addition */
 }
 
@@ -301,12 +312,12 @@ html {
 
 .slideshow .slide:nth-child(2) {
     background-image: url('Images/Nici4.png');
-    animation-delay: 5s;
+    animation-delay: 4s;
 }
 
 .slideshow .slide:nth-child(3) {
     background-image: url('Images/Nici5.png');
-    animation-delay: 10s;
+    animation-delay: 8s;
 }
 @keyframes slide {
     0% { 
